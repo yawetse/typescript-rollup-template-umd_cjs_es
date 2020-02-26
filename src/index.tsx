@@ -1,5 +1,5 @@
 /**
- * [[include:manual/tutorial.md]]
+ * [[include:../manual/tutorial.md]]
  */
 
 import React from "react";

@@ -6,7 +6,7 @@ quickly generate UMDs and other module types with rollup and typescript
 Clone the repo and drop your module in the src directory.
 ```shell
 # Install Prerequisites
-$ npm install rollup typedoc jest --g
+$ npm install rollup typedoc jest sitedown --g
 ```
 
 ## Basic Usage

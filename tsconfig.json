@@ -32,7 +32,8 @@
   ],
   "typedocOptions":{
     "out":"./docs",
-    "includes":"./manual",
+    "include":"./manual",
+    "mdPagesSourcePath": "./manual",
     "hideGenerator":true
   }
 }
