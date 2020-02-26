@@ -13,9 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/yawetse/typescript-rollup-template-umd_cjs_es.git"
   },
-  "keywords": [
-   
-  ],
+  "keywords": [],
   "author": {
     "name": "First Last",
     "email": "first.last@email.com"
