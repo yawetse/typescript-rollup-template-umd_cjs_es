@@ -1,0 +1,34 @@
+{
+  "main": "dist/index.cjs.js",
+  "module": "src/main.js",
+  "esm": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
+  "web": "dist/index.web.js",
+  "modules.root": "build",
+  "type": "module",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "benchmark": "node -r esm  benchmark/main_bmrk.js",
+    "test": "jest --coverage",
+    "doc": "esdoc",
+    "compile": "tsc",
+    "build": "tsc && rollup -c && esdoc",
+    "coverage": "coveralls"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "rollup": "^1.31.1",
+    "rollup-plugin-alias": "^2.2.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.2.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser-js": "^1.0.2",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslib": "^1.11.0",
+    "typescript": "^3.8.2"
+  }
+}
