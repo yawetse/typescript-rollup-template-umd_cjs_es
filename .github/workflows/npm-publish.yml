@@ -20,6 +20,7 @@ jobs:
       # if: "contains(github.event.head_commit.message, 'Release')"
       # uses: pascalgn/npm-publish-action@latest
       # uses: pascalgn/npm-publish-action@51fdb4531e99aac1873764ef7271af448dc42ab4
+      
       with: # All of theses inputs are optional
         tag_name: "v%s"
         tag_message: "v%s"
