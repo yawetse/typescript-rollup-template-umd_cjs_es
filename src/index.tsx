@@ -10,6 +10,10 @@ interface Props {
 
 interface State {}
 
+/**
+ * Simple Function Component Test
+ * @param props.bar - test prop 
+ */
 export const FuncComponent = (props:Props) => (<section title={props.bar}>
   <div className="FuncComponent">
     <h1>Hello Demo Function Component</h1>

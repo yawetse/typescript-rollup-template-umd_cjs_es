@@ -28,7 +28,7 @@
     "dev": "rollup -c -w",
     "benchmark": "node -r esm  benchmark/main_bmrk.js",
     "test": "jest --coverage",
-    "doc": "typedoc && sitedown manual/ -b docs/manual",
+    "doc": "tsc && typedoc && sitedown manual/ -b docs/manual",
     "compile": "tsc",
     "build": "tsc && rollup -c && typedoc && sitedown manual/ -b docs/manual",
     "coverage": "coveralls"

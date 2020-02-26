@@ -1,0 +1,22 @@
+  name: Update Documentation
+  on: ["push","pull_request"]
+  jobs:
+
+    build:
+      name: Build
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@master
+      - name: Use Node.js 13.x
+        uses: actions/setup-node@master
+        with:
+          version: 13.x
+
+      - name: npm install, jestcoverage
+        run: |
+          npm i typedoc sitedown typescript -g
+          npm install
+          npm run doc
+
+      - name: Push new files back to master.
+        uses: mikeal/publish-to-github-action@1.0.0
