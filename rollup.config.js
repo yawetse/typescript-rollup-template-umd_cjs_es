@@ -5,6 +5,7 @@ import builtins from 'rollup-plugin-node-builtins';
 import globals from 'rollup-plugin-node-globals';
 import replace from '@rollup/plugin-replace';
 import terser from 'rollup-plugin-terser-js';
+import sucrase from '@rollup/plugin-sucrase';
 import pkg from "./package.json";
 
 const name = 'mymod';
@@ -66,23 +67,28 @@ function getPlugins({
     minify = false,
 }) {
   const plugins = [
+    sucrase({
+      // exclude: ['node_modules/**'],
+      transforms: ['jsx','typescript']
+    }),
     // // external(),
     replace({
       'process.env.NODE_ENV': minify ?
         JSON.stringify('production') : JSON.stringify('development'),
       'global.': '(typeof global!=="undefined" ? global : window).'
     }),
-    resolve({
-      preferBuiltins: true,
-    }),
-    builtins({}),
+
     typescript({
       noEmitOnError: false,
       declaration: false,
       declarationDir: null,
     }),
+    resolve({
+      preferBuiltins: true,
+    }),
+    builtins({}),
     commonjs({
-      extensions: [ '.js', '.ts' ]
+      extensions: [ '.js', '.ts','.jsx' ,'.tsx' ]
       // namedExports: {
       //     // 'node_modules/react-is/index.js': ['isValidElementType'],
       //     // 'node_modules/react/index.js': [

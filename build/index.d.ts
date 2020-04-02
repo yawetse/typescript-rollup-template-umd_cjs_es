@@ -2,10 +2,10 @@
  * [[include:../manual/tutorial.md]]
  */
 import React from "react";
-interface Props {
+export interface Props {
     bar: string;
 }
-interface State {
+export interface State {
 }
 /**
  * Simple Function Component Test
@@ -16,4 +16,3 @@ export declare class ClassComponent extends React.Component<Props, State> {
     constructor(props: Props);
     render(): JSX.Element;
 }
-export {};

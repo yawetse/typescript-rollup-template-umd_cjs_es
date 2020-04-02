@@ -4,11 +4,11 @@
 
 import React from "react";
 
-interface Props {
+export interface Props {
   bar: string;
 }
 
-interface State {}
+export interface State {}
 
 /**
  * Simple Function Component Test
